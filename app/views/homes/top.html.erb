@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>top</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <h1>ようこそ Bookers へ！</h1>
+      <p class="text"><strong>Bookers</strong>では、さまざまな書籍に関する意見や</p>
+      <p class="text">印象を共有し交換することができます。</p>
+      <p class="text"><a href="/books">start</a></p>
+    <%= yield %>
+  </body>
+</html>
