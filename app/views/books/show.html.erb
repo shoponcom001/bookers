@@ -1,4 +1,17 @@
-<h2>Title</h2>
-<p><%= @book.title %></p>
-<h2>Body</h2>
-<p><%= @book.body %></p>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>top</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  
+  <body>
+      <p class="show_item"><strong>Title:</strong><%= @book.title %></p>
+      <p class="show_item"><strong>Body:</strong><%= @book.body %></p>
+      <%= link_to "Edit", edit_book_path(@book) %>
+      | 
+      <a href="/books">Back</a>
+  </body>
