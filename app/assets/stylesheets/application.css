@@ -69,3 +69,8 @@ a {
   margin: 33px;
   color: green;
 }
+
+a:hover {
+  background-color: #000;
+  color: #fff;
+}
