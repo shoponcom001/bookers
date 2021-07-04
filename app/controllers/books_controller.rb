@@ -3,7 +3,7 @@ class BooksController < ApplicationController
     @books = Book.all
     @book = Book.new
   end
-  
+
   def show
     @book = Book.find(params[:id])
   end
@@ -27,9 +27,11 @@ class BooksController < ApplicationController
   end
 
   def update
-    book = Book.find(params[:id])
-    if book.update(book_params)
-      redirect_to book_path(book), notice: "Book was successfully updated."
+    @book = Book.find(params[:id])
+    if @book.update(book_params)
+      redirect_to book_path(@book), notice: "Book was successfully updated."
+    else
+      render :edit
     end
   end
 
