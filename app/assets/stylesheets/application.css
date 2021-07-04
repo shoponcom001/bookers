@@ -64,3 +64,8 @@ a {
 .show_item {
   margin: 33px
 }
+
+.show_flash {
+  margin: 33px;
+  color: green;
+}

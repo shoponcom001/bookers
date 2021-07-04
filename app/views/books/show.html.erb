@@ -9,9 +9,14 @@
   </head>
   
   <body>
+      <% if flash[:notice] %>
+       <p class=show_flash><%= flash[:notice] %></p>
+      <% end %>
       <p class="show_item"><strong>Title:</strong><%= @book.title %></p>
       <p class="show_item"><strong>Body:</strong><%= @book.body %></p>
       <%= link_to "Edit", edit_book_path(@book) %>
       | 
       <a href="/books">Back</a>
+    <%= yield %>
   </body>
+</html>
